@@ -1,0 +1,42 @@
+2025-06-21 15:26:31,078 - pyrogram.connection.connection - INFO - Connecting...
+2025-06-21 15:26:31,081 - pyrogram.connection.connection - INFO - Connected! Production DC5 - IPv4
+2025-06-21 15:26:31,083 - pyrogram.session.session - INFO - NetworkTask started
+2025-06-21 15:26:31,833 - pyrogram.session.session - INFO - Session initialized: Layer 158
+2025-06-21 15:26:31,834 - pyrogram.session.session - INFO - Device: CybroX-UserBot @ 4104b78 - 1.0.0
+2025-06-21 15:26:31,836 - pyrogram.session.session - INFO - System: 10.0.26100 AMD64 (en)
+2025-06-21 15:26:31,836 - pyrogram.session.session - INFO - Session started
+2025-06-21 15:26:31,838 - pyrogram.session.session - INFO - PingTask started
+2025-06-21 15:26:32,256 - pyrogram.dispatcher - INFO - Started 16 HandlerTasks
+2025-06-21 15:26:32,323 - root - INFO - Module admin loaded successfully
+2025-06-21 15:26:32,348 - root - ERROR - Error loading module afk.py: module 'pyrogram.filters' has no attribute 'edited'
+2025-06-21 15:26:32,354 - root - INFO - Module help loaded successfully
+2025-06-21 15:26:32,360 - root - INFO - Module info loaded successfully
+2025-06-21 15:26:32,365 - root - INFO - Module notes loaded successfully
+2025-06-21 15:26:32,369 - root - INFO - Module ping loaded successfully
+2025-06-21 15:26:32,374 - root - ERROR - Error loading module purge.py: 'coroutine' object has no attribute 'handlers' and no __dict__ for setting new attributes
+2025-06-21 15:26:32,526 - root - ERROR - Error loading module stickers.py: cannot import name 'StickerSet' from 'pyrogram.types' (C:\Python313\Lib\site-packages\pyrogram\types\__init__.py)
+2025-06-21 15:26:32,635 - root - INFO - Module system loaded successfully
+2025-06-21 15:26:32,642 - root - INFO - Module text loaded successfully
+2025-06-21 15:26:32,648 - root - INFO - Custom module __init__ loaded successfully
+2025-06-21 15:26:32,649 - root - INFO - CybroX-UserBot started!
+2025-06-21 15:31:24,577 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-158' coro=<Client.handle_updates() done, defined at C:\Python313\Lib\site-packages\pyrogram\client.py:535> exception=ValueError('Peer id invalid: -1002187190009')>
+Traceback (most recent call last):
+  File "C:\Python313\Lib\site-packages\pyrogram\methods\advanced\resolve_peer.py", line 62, in resolve_peer
+    return await self.storage.get_peer_by_id(peer_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\site-packages\pyrogram\storage\sqlite_storage.py", line 142, in get_peer_by_id
+    raise KeyError(f"ID not found: {peer_id}")
+KeyError: 'ID not found: -1002187190009'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python313\Lib\site-packages\pyrogram\client.py", line 569, in handle_updates
+    channel=await self.resolve_peer(utils.get_channel_id(channel_id)),
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\site-packages\pyrogram\methods\advanced\resolve_peer.py", line 89, in resolve_peer
+    peer_type = utils.get_peer_type(peer_id)
+  File "C:\Python313\Lib\site-packages\pyrogram\utils.py", line 246, in get_peer_type
+    raise ValueError(f"Peer id invalid: {peer_id}")
+ValueError: Peer id invalid: -1002187190009
